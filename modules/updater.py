@@ -11,7 +11,7 @@ class updaterMethods():
             globalVersion = config.get('version')
             return globalVersion
         except Exception as rr:
-            print(f'unable to check for updates {rr}')
+            print(f'Unable to check for updates')
     
     @staticmethod
     def currentVersion(configFilePath):
