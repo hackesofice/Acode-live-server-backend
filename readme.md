@@ -1,3 +1,8 @@
+<p align="centre">
+  <a href="">
+  <img src="https://raw.githubusercontent.com/hackesofice/Z/refs/heads/main/Live-Server-backend/Live.jpg" alt="Live server img">
+</p>
+    
 # Disclaimer
 
 This is a simple **backend server** for the **<a href="https://acode.app/plugin/liveserver">Acode Live Server</a>** plugin. It runs inside the **Termux** app on your Android device.
