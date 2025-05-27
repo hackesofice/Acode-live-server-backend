@@ -43,7 +43,7 @@ class updaterMethods():
     @staticmethod
     def triggerUpdate():
         print('UPDATE HAS BE STARTED')
-        os.system('rm -rf Acode-live-server-backend')
+        os.system('cd ~ && rm -rf Acode-live-server-backend')
         os.system('pkg update && pkg upgrade -y')
         os.system('pkg install git -y')
         os.system('git clone https://github.com/hackesofice/Acode-live-server-backend.git')
