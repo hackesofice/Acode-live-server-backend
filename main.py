@@ -23,8 +23,22 @@ def home():
     if request.method == 'GET':
         file_name = jsonData.get('fileName')
         if file_name and template_env:
-            template = template_env.get_template(file_name)
-            return template.render()
+            try:
+                template = template_env.get_template(file_name)
+                return template.render()
+            except PermissionError as p:
+                print('\033[1;31;43m#\033[0m'*50)
+                print('\033[1;31;43mNo Storage Permission plese allow storage access Permission\033[0m')
+                print('\033[1;31;43m#\033[0m'*50)
+                
+#                 print('\033[31;43mThis is Red Text on a Yellow Background\033[0m')
+
+# # To make it Bold:
+# This is Bold Red Text on a Yellow Background
+                
+                return ' please grant us all file acces permission or use f-groide version of acode app', 500
+            except Exception as e:
+                print('Error while getting that Html file ', e)
         else:
             return 'Template not configured.', 400
     else:
