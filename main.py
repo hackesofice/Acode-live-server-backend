@@ -1,3 +1,4 @@
+from modules.autoRun import dependenciesManager
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from jinja2 import Environment, FileSystemLoader
@@ -26,7 +27,7 @@ def home():
             try:
                 template = template_env.get_template(file_name)
                 return template.render()
-            except PermissionError as p:
+            except PermissionError as _ :
                 print('\033[1;31;43m#\033[0m'*50)
                 print('\033[1;31;43mNo Storage Permission plese allow storage access Permission\033[0m')
                 print('\033[1;31;43m#\033[0m'*50)
