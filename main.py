@@ -37,7 +37,7 @@ def home():
 # # To make it Bold:
 # This is Bold Red Text on a Yellow Background
                 
-                # return '''<div style="display:flex; flex-direction:column; justify-content:center;"> <h2> Faild </h2> <h3>Seems You're using an Play Store Version of app, Due to Restrictions Live Server isn't able to access that file, so please use Terminal-Home Directory Or Download the app From F-Droid in that version you'll able to use full Features</h3> </br> <button> <a href="https://f-droid.org/en/packages/com.foxdebug.acode/"> Click To Download F-Droid Version </a> </button></div>''', 500
+                return '''<div style="display:flex; flex-direction:column; justify-content:center;"> <h2> Faild </h2> <h3>Seems You're using an Play Store Version of app, Due to Restrictions Live Server isn't able to access that file, so please use Terminal-Home Directory Or Download the app From F-Droid in that version you'll able to use full Features</h3> </br> <button> <a href="https://f-droid.org/en/packages/com.foxdebug.acode/"> Click To Download F-Droid Version </a> </button></div>''', 500
             except Exception as e:
                 print('Error while getting that Html file ', e)
         else:
